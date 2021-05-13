@@ -1,0 +1,15 @@
+[20-Apr-2021 01:10:57 Asia/Dhaka] PHP Fatal error:  Cannot redeclare SetupController::attendee() in /home/customer/www/eastfuelconf.com/public_html/sub/application/controllers/SetupController.php on line 108
+[20-Apr-2021 01:11:53 Asia/Dhaka] PHP Fatal error:  Cannot redeclare SetupController::attendee() in /home/customer/www/eastfuelconf.com/public_html/sub/application/controllers/SetupController.php on line 108
+[20-Apr-2021 01:11:55 Asia/Dhaka] PHP Fatal error:  Cannot redeclare SetupController::attendee() in /home/customer/www/eastfuelconf.com/public_html/sub/application/controllers/SetupController.php on line 108
+[20-Apr-2021 01:12:00 Asia/Dhaka] PHP Fatal error:  Cannot redeclare SetupController::attendee() in /home/customer/www/eastfuelconf.com/public_html/sub/application/controllers/SetupController.php on line 108
+[26-Apr-2021 00:50:08 Asia/Dhaka] PHP Fatal error:  Cannot redeclare SetupController::attendee() in /home/customer/www/eastfuelconf.com/public_html/sub/application/controllers/SetupController.php on line 108
+[26-Apr-2021 00:50:14 Asia/Dhaka] PHP Fatal error:  Cannot redeclare SetupController::attendee() in /home/customer/www/eastfuelconf.com/public_html/sub/application/controllers/SetupController.php on line 108
+[26-Apr-2021 00:50:22 Asia/Dhaka] PHP Fatal error:  Cannot redeclare SetupController::attendee() in /home/customer/www/eastfuelconf.com/public_html/sub/application/controllers/SetupController.php on line 108
+[26-Apr-2021 00:50:25 Asia/Dhaka] PHP Fatal error:  Cannot redeclare SetupController::attendee() in /home/customer/www/eastfuelconf.com/public_html/sub/application/controllers/SetupController.php on line 108
+[26-Apr-2021 00:50:56 Asia/Dhaka] PHP Fatal error:  Cannot redeclare SetupController::attendee() in /home/customer/www/eastfuelconf.com/public_html/sub/application/controllers/SetupController.php on line 108
+[26-Apr-2021 00:51:21 Asia/Dhaka] PHP Fatal error:  Cannot redeclare SetupController::attendee() in /home/customer/www/eastfuelconf.com/public_html/sub/application/controllers/SetupController.php on line 108
+[26-Apr-2021 00:51:23 Asia/Dhaka] PHP Fatal error:  Cannot redeclare SetupController::attendee() in /home/customer/www/eastfuelconf.com/public_html/sub/application/controllers/SetupController.php on line 108
+[26-Apr-2021 00:52:54 Asia/Dhaka] PHP Fatal error:  Cannot redeclare SetupController::attendee() in /home/customer/www/eastfuelconf.com/public_html/sub/application/controllers/SetupController.php on line 108
+[30-Apr-2021 02:20:02 Asia/Dhaka] PHP Fatal error:  Cannot redeclare FrontendController::attendees() in /home/customer/www/eastfuelconf.com/public_html/sub/application/controllers/FrontendController.php on line 102
+[30-Apr-2021 02:20:17 Asia/Dhaka] PHP Fatal error:  Cannot redeclare FrontendController::attendees() in /home/customer/www/eastfuelconf.com/public_html/sub/application/controllers/FrontendController.php on line 102
+[30-Apr-2021 02:20:47 Asia/Dhaka] PHP Fatal error:  Cannot redeclare FrontendController::attendees() in /home/customer/www/eastfuelconf.com/public_html/sub/application/controllers/FrontendController.php on line 102
