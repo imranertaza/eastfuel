@@ -68,7 +68,9 @@
                                 <td><?php echo $item->form_id; ?></td>
                                 <td><?php echo $item->firstName . ' ' . $item->lastName; ?></td>
                                 <td><?php echo $item->organization; ?></td>
-                                <td><a href="#" class="btn btn-primary">Edit</a></td>
+                                <td><a href="<?php echo base_url('admin/edit_attendee/'.$item->form_id) ?>" class="btn btn-primary">Edit</a></td>
+
+                                <?php //echo base_url('admin/addnote/payment/' . $item->payment_id) ?>
                             </tr>
                         <?php } ?>
                     </tbody>

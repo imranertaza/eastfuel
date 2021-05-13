@@ -149,6 +149,69 @@ class SetupController extends CI_Controller
     }
 
 
+    public function edit_attendee($id)
+    {
+
+        if (isPostBack()) {
+            // $postBackData['form_type'] = 3;
+            $postBackData['firstName'] = $fname =  $this->input->post('firstName');
+            $postBackData['lastName'] = $lname =  $this->input->post('lastName');
+            $postBackData['badgeName'] = $this->input->post('badgeName');
+            // $postBackData['email'] = $email =  $this->input->post('email');
+            $postBackData['secondaryEmail'] = $this->input->post('secondaryEmail');
+            $postBackData['organization'] = $this->input->post('organization');
+            $postBackData['jobTitle'] = $this->input->post('jobTitle');
+            $postBackData['addressLine1'] = $this->input->post('addressLine1');
+            $postBackData['addressLine2'] = $this->input->post('addressLine2');
+            $postBackData['city'] = $this->input->post('city');
+            $postBackData['state'] = $this->input->post('state');
+            $postBackData['country'] = $this->input->post('country');
+            $postBackData['zip'] = $this->input->post('zip');
+            $postBackData['phone'] = $this->input->post('phone');
+            $postBackData['officePhone'] = $this->input->post('officePhone');
+            $postBackData['attendingConf'] = $this->input->post('attendingConf');
+            $postBackData['companyType'] = $this->input->post('companyType');
+            $postBackData['other'] = $this->input->post('other');
+            $postBackData['emergencyContactName'] = $this->input->post('emergencyContactName');
+            $postBackData['emmergencyContactPhone'] = $this->input->post('emmergencyContactPhone');
+            $postBackData['confEvent'] = $this->input->post('confEvent');
+            $postBackData['handicap'] = $this->input->post('handicap');
+            $postBackData['rentalClubs'] = $this->input->post('rentalClubs');
+            $postBackData['messagePreferredTime'] = $this->input->post('messagePreferredTime');
+            $postBackData['wedWelReception'] = $this->input->post('wedWelReception');
+            $postBackData['thursdayBreakfast'] = $this->input->post('thursdayBreakfast');
+            $postBackData['thursdayLuncheon'] = $this->input->post('thursdayLuncheon');
+            $postBackData['thursdayDinner'] = $this->input->post('thursdayDinner');
+            $postBackData['spouseDinnerTicket'] = $this->input->post('spouseDinnerTicket');
+            $postBackData['spouseFirstName'] = $this->input->post('spouseFirstName');
+            $postBackData['spouseLastName'] = $this->input->post('spouseLastName');
+            $postBackData['fridayBreakfast'] = $this->input->post('fridayBreakfast');
+            $postBackData['dietaryRestrictions'] = $this->input->post('dietaryRestrictions');
+            // $postBackData['password'] = md5($this->input->post('password'));
+            // $postBackData['rawpass'] = $this->input->post('password');
+            $postBackData['paymentMethod'] = $paymentMethod = $this->input->post('paymentMethod');
+            $postBackData['amount'] = $this->input->post('amount');
+
+            $new_user = $this->db->where('form_id',$id)->update('nso_forms', $postBackData);
+
+            //$this->CommonModel->insert_data('nso_forms', $postBackData);
+
+            // if (!empty($new_user)) {
+                
+                message("Submitted successfully! Thank You...");
+            // } else {
+            //     exception("Something went wrong! Please try again...");
+            // }
+        }
+
+
+
+        $data['title'] = "Edit Attendees";
+        $data['users'] = $this->db->where('form_id', $id)->get('nso_forms')->row();//$this->CommonModel->get_data_list('nso_forms', 'createdAt', 'DESC');
+        $data['mainContent'] = $this->load->view('admin/setup/attendees_edit.php', $data, true);
+        $this->load->view('admin_master_templete', $data);
+    }
+
 
     public function page_edit($uri)
     {

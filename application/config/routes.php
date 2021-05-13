@@ -77,6 +77,8 @@ $route['admin/file_update'] = 'SetupController/file_update';
 
 $route['admin/products'] = 'SetupController/products';
 
+$route['admin/edit_attendee/(:any)'] = 'SetupController/edit_attendee/$1';
+
 $route['admin/attendee'] = 'SetupController/attendee';
 $route['admin/registereduser'] = 'SetupController/registereduser';
 $route['admin/grouping'] = 'SetupController/grouping';
