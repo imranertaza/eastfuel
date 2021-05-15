@@ -54,6 +54,7 @@
                             <th>Registerd Name</th>
                             <th>Partner ID</th>
                             <th>Partner Name</th>
+                            <th>Action</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -73,6 +74,7 @@
                                 <td><?php echo $user->firstName . ' ' . $user->lastName; ?></td>
                                 <td><?php echo $item->partner_id; ?></td>
                                 <td><?php echo $partner->firstName . ' ' . $partner->lastName; ?></td>
+                                <td><a href="#" class="btn btn-primary">Edit</a></td>
                             </tr>
                         <?php } ?>
                     </tbody>

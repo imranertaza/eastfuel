@@ -87,9 +87,8 @@
                             <th>Payment Method</th>
                             <th>Payment Status</th>
                             <th>Note</th>
-                            
-                            
                             <th>Reg.At</th>
+                            <th>Edit Action</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -149,6 +148,7 @@
                                 <td><?php echo ($item->paymentMethod == "online") ? ucwords($item->paymentStatus) : "-"; ?></td>
                                 <td><?php echo $item->note; ?></td>
                                 <td><?php echo  date("d-m-Y H:i:s", strtotime($item->createdAt)); ?></td>
+                                <td><a href="<?php echo base_url('admin/edit_attendee/'.$item->form_id) ?>" class="btn btn-primary">Edit</a></td>
                             </tr>
                         <?php } ?>
                     </tbody>
