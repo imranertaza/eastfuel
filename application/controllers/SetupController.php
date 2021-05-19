@@ -71,7 +71,7 @@ class SetupController extends CI_Controller
             $postBackData['dietaryRestrictions'] = $this->input->post('dietaryRestrictions');
             // $postBackData['password'] = md5($this->input->post('password'));
             // $postBackData['rawpass'] = $this->input->post('password');
-            $postBackData['paymentMethod'] = $paymentMethod = $this->input->post('paymentMethod');
+            $postBackData['paymentMethod'] = $this->input->post('paymentMethod');
             $postBackData['amount'] = $this->input->post('amount');
 
             $new_user = $this->CommonModel->insert_data('nso_forms', $postBackData);
@@ -191,7 +191,7 @@ class SetupController extends CI_Controller
             $postBackData['firstName'] = $fname =  $this->input->post('firstName');
             $postBackData['lastName'] = $lname =  $this->input->post('lastName');
             $postBackData['badgeName'] = $this->input->post('badgeName');
-            // $postBackData['email'] = $email =  $this->input->post('email');
+            $postBackData['email'] = $email =  $this->input->post('email');
             $postBackData['secondaryEmail'] = $this->input->post('secondaryEmail');
             $postBackData['organization'] = $this->input->post('organization');
             $postBackData['jobTitle'] = $this->input->post('jobTitle');
@@ -223,19 +223,13 @@ class SetupController extends CI_Controller
             $postBackData['dietaryRestrictions'] = $this->input->post('dietaryRestrictions');
             // $postBackData['password'] = md5($this->input->post('password'));
             // $postBackData['rawpass'] = $this->input->post('password');
-            $postBackData['paymentMethod'] = $paymentMethod = $this->input->post('paymentMethod');
+            $postBackData['paymentMethod'] = $this->input->post('paymentMethod');
+            $postBackData['paymentStatus'] = $this->input->post('paymentStatus');
             $postBackData['amount'] = $this->input->post('amount');
 
             $new_user = $this->db->where('form_id',$id)->update('nso_forms', $postBackData);
-
-            //$this->CommonModel->insert_data('nso_forms', $postBackData);
-
-            // if (!empty($new_user)) {
                 
-                message("Submitted successfully! Thank You...");
-            // } else {
-            //     exception("Something went wrong! Please try again...");
-            // }
+            message("Submitted successfully! Thank You...");
         }
 
 

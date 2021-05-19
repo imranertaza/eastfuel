@@ -63,12 +63,12 @@
                                 <input name="badgeName" placeholder="Enter 1st name..." class="form-control" value="<?php echo $users->badgeName?>" type="text" required>
                             </div>
                         </div>
-                        <!-- <div class="form-group row">
+                        <div class="form-group row">
                             <label class="col-form-label col-md-4">Email <span class="text-danger">*</span></label>
                             <div class="col-md-8">
-                                <input name="email" placeholder="Enter your email address" class="form-control" type="email" required>
+                                <input name="email" placeholder="Enter your email address" class="form-control" type="email" required value="<?php echo $users->email?>">
                             </div>
-                        </div> -->
+                        </div>
                         <div class="form-group row">
                             <label class="col-form-label col-md-4">Secondary Email</label>
                             <div class="col-md-8">
@@ -421,6 +421,33 @@
                 <div class="card">
                     <div class="card-body">
                         <div class="form-group row">
+                            <label class="col-form-label col-md-4">Payment Method <span class="text-danger">*</span></label>
+                            <div class="col-md-8">
+                                <div class="form-group control-group">
+                                    <select name="paymentMethod" class="yit-nice-select width-full form-control" required>
+                                        <option value="<?php echo $users->paymentMethod?>"><?php echo $users->paymentMethod?></option>
+                                        <option value="online">Online</option>
+                                        <option value="offline">Offline</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <label class="col-form-label col-md-4">Payment Status <span class="text-danger">*</span></label>
+                            <div class="col-md-8">
+                                <div class="form-group control-group">
+                                    <select name="paymentStatus" class="yit-nice-select width-full form-control" required>
+                                        <option value="<?php echo $users->paymentStatus?>"><?php echo $users->paymentStatus?></option>
+                                        <option value="pending">pending</option>
+                                        <option value="paid">paid</option>
+                                        <option value="none">none</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
                             <label class="col-form-label col-md-4">Amount to be Paid</label>
                             <div class="col-md-8">
                                 <div class="form-group control-group">
@@ -429,7 +456,6 @@
                             </div>
                         </div>
                         <div class="text-right">
-                            <input type="hidden" name="paymentMethod" id="paymentMethod" value="offline">
                             <button type="submit" class="btn btn-primary">Update</button>
                         </div>
                     </div>
