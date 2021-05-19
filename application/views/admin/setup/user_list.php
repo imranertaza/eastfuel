@@ -88,7 +88,6 @@
                             <th>Payment Status</th>
                             <th>Note</th>
                             <th>Reg.At</th>
-                            <th>Edit Action</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -104,6 +103,8 @@
                                             </a>
                                             <div class="dropdown-menu dropdown-menu-right">
                                                 <a href="<?php echo base_url('admin/addnote/attendee/' . $item->form_id) ?>" class="dropdown-item" target="_blank"><i class="icon-plus-circle2"></i> Add Note</a>
+                                                <a href="<?php echo base_url('admin/edit_attendee/'.$item->form_id) ?>" class="dropdown-item">
+                                                    <i class="icon-edit"></i> Edit</a>
                                                 <a href="<?php echo base_url('admin/delete/reg_user/' . $item->form_id) ?>" onclick="return confirm('are you sure?')" class="dropdown-item"><i class="icon-bin"></i> Delete</a>
                                             </div>
                                         </div>
@@ -148,7 +149,7 @@
                                 <td><?php echo ($item->paymentMethod == "online") ? ucwords($item->paymentStatus) : "-"; ?></td>
                                 <td><?php echo $item->note; ?></td>
                                 <td><?php echo  date("d-m-Y H:i:s", strtotime($item->createdAt)); ?></td>
-                                <td><a href="<?php echo base_url('admin/edit_attendee/'.$item->form_id) ?>" class="btn btn-primary">Edit</a></td>
+                                <!-- <td><a href="<?php //echo base_url('admin/edit_attendee/'.$item->form_id) ?>" class="btn btn-primary">Edit</a></td> -->
                             </tr>
                         <?php } ?>
                     </tbody>

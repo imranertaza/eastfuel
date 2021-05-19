@@ -140,6 +140,40 @@ class SetupController extends CI_Controller
         $this->load->view('admin_master_templete', $data);
     }
 
+
+    public function edit_grouping($id)
+    {
+
+        if (isPostBack()) {
+            $postBackData['group_type'] = $this->input->post('groupType');
+            $postBackData['group_title'] = $this->input->post('groupTitle');
+            
+
+            $new_user = $this->db->where('group_id',$id)->update('nso_group', $postBackData);
+
+            // print $this->db->last_query();
+
+            //$this->CommonModel->insert_data('nso_forms', $postBackData);
+
+            // if (!empty($new_user)) {
+                
+                message("Submitted successfully! Thank You...");
+            // } else {
+            //     exception("Something went wrong! Please try again...");
+            // }
+        }
+
+
+
+        $data['title'] = "Edit Grouping";
+        $data['users'] = $this->db->where('group_id', $id)->get('nso_group')->row();
+        //$this->CommonModel->get_data_list('nso_forms', 'createdAt', 'DESC');
+        $data['mainContent'] = $this->load->view('admin/setup/grouping_edit.php', $data, true);
+        $this->load->view('admin_master_templete', $data);
+    }
+
+
+
         public function attendee()
     {
         $data['title'] = "Attendees List";

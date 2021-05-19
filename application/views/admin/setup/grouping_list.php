@@ -74,7 +74,7 @@
                                 <td><?php echo $user->firstName . ' ' . $user->lastName; ?></td>
                                 <td><?php echo $item->partner_id; ?></td>
                                 <td><?php echo $partner->firstName . ' ' . $partner->lastName; ?></td>
-                                <td><a href="#" class="btn btn-primary">Edit</a></td>
+                                <td><a href="<?php echo base_url('admin/edit_grouping/'.$item->group_id) ?>" class="btn btn-primary">Edit</a></td>
                             </tr>
                         <?php } ?>
                     </tbody>
