@@ -442,6 +442,7 @@
                                         <option value="pending">pending</option>
                                         <option value="paid">paid</option>
                                         <option value="none">none</option>
+                                        <option value="canceled">canceled</option>
                                     </select>
                                 </div>
                             </div>
