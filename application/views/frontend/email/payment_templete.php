@@ -12,7 +12,7 @@
                     <td colspan="2" style="border:none;padding:5pt">
                         <div style="margin:0in 0in 0.0001pt;font-size:12pt;font-family:Times New Roman,serif;text-align:center">
                             <span id="m_3500189978075623348cid:1791f8d6999f6b934d71">
-                                <img src="https://eastfuelconf.com/sub/upload/images/logo/email_logo.png" alt="Logo" alt="Logo" width="250px">
+                                <img src="https://eastfuelconf.com/sub/assets/frontend/images/EFBC-Fix-1.png" alt="Logo" alt="Logo">
                             </span>
                         </div>
                     </td>
