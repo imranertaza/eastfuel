@@ -261,7 +261,7 @@
                                 <div class="form-group control-group">
                                     <select name="wedWelReception" class="yit-nice-select width-full form-control" required>
                                         <option value="">Select an option</option>
-                                        <option value="I will attend">I will attend</option>
+                                        <option value="I will attend" selected>I will attend</option>
                                         <option value="I will NOT attend">I will NOT attend</option>
                                     </select>
                                 </div>
@@ -273,7 +273,7 @@
                                 <div class="form-group control-group">
                                     <select name="thursdayBreakfast" class="yit-nice-select width-full form-control" required>
                                         <option value="">Select an option</option>
-                                        <option value="I will attend">I will attend</option>
+                                        <option value="I will attend" selected>I will attend</option>
                                         <option value="I will NOT attend">I will NOT attend</option>
                                     </select>
                                 </div>
@@ -285,7 +285,7 @@
                                 <div class="form-group control-group">
                                     <select name="thursdayLuncheon" class="yit-nice-select width-full form-control" required>
                                         <option value="">Select an option</option>
-                                        <option value="I will attend">I will attend</option>
+                                        <option value="I will attend" selected>I will attend</option>
                                         <option value="I will NOT attend">I will NOT attend</option>
                                     </select>
                                 </div>
@@ -297,7 +297,7 @@
                                 <div class="form-group control-group">
                                     <select name="thursdayDinner" class="yit-nice-select width-full form-control" required>
                                         <option value="">Select an option</option>
-                                        <option value="I will attend">I will attend</option>
+                                        <option value="I will attend" selected>I will attend</option>
                                         <option value="I will NOT attend">I will NOT attend</option>
                                     </select>
                                 </div>
@@ -341,8 +341,8 @@
                                 <div class="form-group control-group">
                                     <select name="fridayBreakfast" class="yit-nice-select width-full form-control">
                                         <option value="">Select an option</option>
-                                        <option value="I will attend">I will attend</option>
-                                        <option value="I will NOT attend" selected>I will NOT attend</option>
+                                        <option value="I will attend" selected>I will attend</option>
+                                        <option value="I will NOT attend" >I will NOT attend</option>
                                     </select>
                                 </div>
                             </div>

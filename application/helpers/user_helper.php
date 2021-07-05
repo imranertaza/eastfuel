@@ -51,6 +51,8 @@ if ( ! function_exists('setUserData'))
 }
 
 
+
+
 if ( ! function_exists('getUseremail'))
 {
 	function getUseremail()
@@ -97,6 +99,18 @@ if ( ! function_exists('userLogout'))
 		if(!isActiveUser()){
 			redirect('/');
 		}
+	}
+}
+
+if ( ! function_exists('getUserNameByID'))
+{
+	function getUserNameByID($id)
+	{
+		$_CI = &get_instance();
+
+		$data = $_CI->db->get_where('nso_forms',array('form_id'=>$id))->row();
+		$name = $data->firstName. $data->lastName;
+		return $name;
 	}
 }
 

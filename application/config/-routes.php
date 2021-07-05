@@ -15,8 +15,7 @@ $route['registration'] = 'FrontendController/registration';
 $route['attendees'] = 'FrontendController/attendees';
 $route['attendees/(:any)'] = 'FrontendController/event_attendees/$1';
 
-$route['golf_participant'] = 'golf/participant';
-$route['golf/update'] = 'golf/update';
+
 $route['group/golf'] = 'FrontendController/create_golf_gp';
 $route['group/fishing'] = 'FrontendController/create_fishing_gp';
 
@@ -77,9 +76,6 @@ $route['admin/file_upload/(:any)'] = 'SetupController/file_upload/$1';
 $route['admin/file_update'] = 'SetupController/file_update';
 
 $route['admin/products'] = 'SetupController/products';
-
-$route['admin/edit_attendee/(:any)'] = 'SetupController/edit_attendee/$1';
-$route['admin/edit_grouping/(:any)'] = 'SetupController/edit_grouping/$1';
 
 $route['admin/attendee'] = 'SetupController/attendee';
 $route['admin/registereduser'] = 'SetupController/registereduser';

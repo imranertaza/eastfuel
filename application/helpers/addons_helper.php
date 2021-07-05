@@ -55,7 +55,8 @@ if (!function_exists('to_pennies')) {
 if (!function_exists('sendEmail')) {
     function sendEmail($email, $content, $attachment = null)
     {
-        $senderEmail = 'mail@eastfuelconf.com';
+        //$senderEmail = 'info@eastfuelconf.com';
+        $senderEmail = 'info@eastfuelconf.com';
         $replyTo = 'info@eastfuelconf.com';
         $senderName = 'no reply';
         $subject =  $content['Subject'];
@@ -65,7 +66,9 @@ if (!function_exists('sendEmail')) {
             'smtp_host' => 'eastfuelconf.com',
             'smtp_port' => 587,
             'smtp_user' => 'mail@eastfuelconf.com',
-            'smtp_pass' => '2$O5_lg.12o1',
+            //'smtp_user' => 'info@eastfuelconf.com',
+            //'smtp_pass' => '2$O5_lg.12o1',
+            'smtp_pass' => '11%332I#1)^q',
             'mailtype'  => 'html',
             'charset'   => 'iso-8859-1',
             'newline' => "\r\n"

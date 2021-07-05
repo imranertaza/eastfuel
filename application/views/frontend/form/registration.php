@@ -3,10 +3,12 @@
         <div class="row mt-4">
             <div class="col-md-8">
                 <ul class="yit-common-listing listing-block font-size-custom-medium">
-                    <li>Early Bird Registration Prior to June 15, 2021	$450 </li>
+                   <!--  <li>Early Bird Registration Prior to June 15, 2021	$450 </li>
                     <li>Registration between June 16 & August 16, 2021	$575 </li>
                     <li>Registration as of August 17th, 2021 or On-Site*	$675 (spouse dinner ticket $200) </li>
-                    <li>*based on availability</li>
+                    <li>*based on availability</li> -->
+                    <li>Registration between June 16 & August 16, 2021 $575</li>
+                    <li>Registration as of August 17th, 2021 or On-Site* $675 (spouse dinner ticket $200)</li>
                 </ul>
             </div>
             <div class="col-md-4">
@@ -287,7 +289,7 @@
                                 <div class="form-group control-group">
                                     <select name="wedWelReception" class="yit-nice-select width-full form-control" required>
                                         <option value="">Select an option</option>
-                                        <option value="I will attend">I will attend</option>
+                                        <option value="I will attend" selected>I will attend</option>
                                         <option value="I will NOT attend">I will NOT attend</option>
                                     </select>
                                 </div>
@@ -300,7 +302,7 @@
                                 <div class="form-group control-group">
                                     <select name="thursdayBreakfast" class="yit-nice-select width-full form-control" required>
                                         <option value="">Select an option</option>
-                                        <option value="I will attend">I will attend</option>
+                                        <option value="I will attend" selected>I will attend</option>
                                         <option value="I will NOT attend">I will NOT attend</option>
                                     </select>
                                 </div>
@@ -312,7 +314,7 @@
                                 <div class="form-group control-group">
                                     <select name="thursdayLuncheon" class="yit-nice-select width-full form-control" required>
                                         <option value="">Select an option</option>
-                                        <option value="I will attend">I will attend</option>
+                                        <option value="I will attend" selected>I will attend</option>
                                         <option value="I will NOT attend">I will NOT attend</option>
                                     </select>
                                 </div>
@@ -324,7 +326,7 @@
                                 <div class="form-group control-group">
                                     <select name="thursdayDinner" class="yit-nice-select width-full form-control" required>
                                         <option value="">Select an option</option>
-                                        <option value="I will attend">I will attend</option>
+                                        <option value="I will attend" selected>I will attend</option>
                                         <option value="I will NOT attend">I will NOT attend</option>
                                     </select>
                                 </div>
@@ -375,8 +377,8 @@
                                 <div class="form-group control-group">
                                     <select name="fridayBreakfast" class="yit-nice-select width-full form-control">
                                         <option value="">Select an option</option>
-                                        <option value="I will attend">I will attend</option>
-                                        <option value="I will NOT attend" selected>I will NOT attend</option>
+                                        <option value="I will attend" selected>I will attend</option>
+                                        <option value="I will NOT attend">I will NOT attend</option>
                                     </select>
                                 </div>
                             </div>
@@ -449,7 +451,7 @@
 
 
     function priceChange(spcDnrTcktVal) {
-        let regFee = 450;
+        let regFee = 575;
         let spcDinrPrice = 90;
         let total = 0;
         let spcDnrTckt = spcDnrTcktVal;
