@@ -20,6 +20,8 @@ $route['golf/update'] = 'golf/update';
 $route['group/golf'] = 'FrontendController/create_golf_gp';
 $route['group/fishing'] = 'FrontendController/create_fishing_gp';
 
+$route['fishing_participant'] = 'fishing/participant';
+$route['fishing/update'] = 'fishing/update';
 
 $route['payment'] = 'PaymentController/payment';
 $route['purchase'] = 'PaymentController/purchase';

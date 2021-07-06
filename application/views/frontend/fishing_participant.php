@@ -16,7 +16,7 @@
     <!-- =================== /META EOC ==================== -->
 
     <!-- =================== /TITLE EOC ==================== -->
-    <title>Golf Participants | Eastern Fuel Buyers</title>
+    <title>Fishing Participants | Eastern Fuel Buyers</title>
     <!-- =================== /TITLE EOC ==================== -->
 
     <!-- =================== /FAVICON BOC ==================== -->
@@ -212,133 +212,136 @@
 <body>
 <section class="pt-0">
     <div class="container">
-        <div class="row">
-            <div class="col-md-12"  >        		
-        		<h4 >There are <?php echo $countper;?> registered golfers, so currently there will be at least <?php echo $count;?> parties of golfers (more when you count the twosomes).</h4><br>
-        		
-        	</div>
-        	<div class="col-md-12" style="padding-left: 30px;" >
-        		<ol>
-        			<li>Click the name of the player you want to move to another group, they will be deleted from their current group</li>
-        			<li>Make room in the desired group by removing a player from that group</li>
-        			<li>Assign the players to their new groups by selecting their names from the pulldown menu</li>
-        		</ol>
-        	</div>
+    	<div class="row">
+		    <div class="col-md-12 "  >
+				
+				
+					<h4 >There are <?php echo $countper;?> registered fishing, so currently there will be at least <?php echo $count;?> parties of fishing (more when you count the twosomes).</h4><br>
+				
+			</div>
+			<div class="col-md-12" style="padding-left: 30px;" >
+				
+				<ol>
+					<li>Click the name of the player you want to move to another group, they will be deleted from their current group</li>
+					<li>Make room in the desired group by removing a player from that group</li>
+					<li>Assign the players to their new groups by selecting their names from the pulldown menu</li>
+				</ol>
+			</div>
 
 
-            <?php foreach ($group as $row) { ?>    
+		    <?php foreach ($group as $row) { ?>    
 
-        	<div class="col-md-3 "  style="padding:10px;">
-        		<div class="row-mm" >
-        			<table style="width:100%;">
-        				<tr>
-        					<td colspan="4" class="group"> <span><b>Group <?php echo $row->category ?></b></span></td>
-        				</tr>
-        				<tr>
-        					<td >
+			<div class="col-md-3"  style="padding:10px;">
+				<div class="row-mm" >
+					<table style="width:100%;">
+						<tr>
+							<td colspan="4" class="group"> <span><b>Group <?php echo $row->category ?></b></span></td>
+						</tr>
+						<tr>
+							<td >
 
-                                <?php if ($row->member_1 == 0 ) { ?>
-                                
-                                    <form action="<?php echo base_url()?>golf/update" method="post" >
-                                    <input type="hidden" name="group_id" value="<?php echo $row->group_id ?>">
+		                        <?php if ($row->member_1 == 0 ) { ?>
+		                        
+		                            <form action="<?php echo base_url()?>fishing/update" method="post" >
+		                            <input type="hidden" name="group_id" value="<?php echo $row->group_id ?>">
 
-            						<select name="member_1" onchange="this.form.submit()" class="sel">
-            							<option>  Select Attendee </option>
+		    						<select name="member_1" onchange="this.form.submit()" class="sel">
+		    							<option>  Select Attendee </option>
 
-                                        <?php foreach ($nso as $val) { ?>
-                                            <option value="<?php echo $val->form_id ?>"><?php echo $val->firstName ?> <?php echo $val->lastName ?></option>
-                                        <?php } ?>
-                                        		
-            						</select>
+		                                <?php foreach ($nso as $val) { ?>
+		                                    <option value="<?php echo $val->form_id ?>"><?php echo $val->firstName ?> <?php echo $val->lastName ?></option>
+		                                <?php } ?>
+		                                		
+		    						</select>
 
-                                    </form>
-                                <?php }else{ ?>
-                                    <a href="#" class="else" onclick="return confirm('Are you sure you want to move Evan Bellan to another foursome?')" > <?php echo getUserNameByID($row->member_1) ?></a>
-                                <?php }?>
+		                            </form>
+		                        <?php }else{ ?>
+		                            <a href="#" class="else" onclick="return confirm('Are you sure you want to move Evan Bellan to another foursome?')" > <?php echo getUserNameByID($row->member_1) ?></a>
+		                        <?php }?>
 
-        					</td>
-        					
-        				</tr>
+							</td>
+							
+						</tr>
 
-        				<tr>
-        					<td>
-        						<?php if ($row->member_2 == 0 ) { ?>
-                                
-                                    <form action="<?php echo base_url()?>golf/update" method="post" >
-                                    <input type="hidden" name="group_id" value="<?php echo $row->group_id ?>">
+						<tr>
+							<td>
+								<?php if ($row->member_2 == 0 ) { ?>
+		                        
+		                            <form action="<?php echo base_url()?>fishing/update" method="post" >
+		                            <input type="hidden" name="group_id" value="<?php echo $row->group_id ?>">
 
-                                    <select name="member_2" onchange="this.form.submit()" class="sel">
-                                        <option>  Select Attendee </option>
+		                            <select name="member_2" onchange="this.form.submit()" class="sel">
+		                                <option>  Select Attendee </option>
 
-                                        <?php foreach ($nso as $val) { ?>
-                                            <option value="<?php echo $val->form_id ?>"><?php echo $val->firstName ?> <?php echo $val->lastName ?></option>
-                                        <?php } ?>
-                                                
-                                    </select>
+		                                <?php foreach ($nso as $val) { ?>
+		                                    <option value="<?php echo $val->form_id ?>"><?php echo $val->firstName ?> <?php echo $val->lastName ?></option>
+		                                <?php } ?>
+		                                        
+		                            </select>
 
-                                    </form>
-                                <?php }else{ ?>
-                                    <a href="#" onclick="return confirm('Are you sure you want to move Evan Bellan to another foursome?')" class="else"> <?php echo getUserNameByID($row->member_2) ?></a>
-                                <?php }?>
-        					</td>
-        					
-        				</tr>
-        				<tr>
-        					<td>
-        						<?php if ($row->member_3 == 0 ) { ?>
-                                
-                                    <form action="<?php echo base_url()?>golf/update" method="post" >
-                                    <input type="hidden" name="group_id" value="<?php echo $row->group_id ?>">
+		                            </form>
+		                        <?php }else{ ?>
+		                            <a href="#" onclick="return confirm('Are you sure you want to move Evan Bellan to another foursome?')" class="else"> <?php echo getUserNameByID($row->member_2) ?></a>
+		                        <?php }?>
+							</td>
+							
+						</tr>
+						<tr>
+							<td>
+								<?php if ($row->member_3 == 0 ) { ?>
+		                        
+		                            <form action="<?php echo base_url()?>fishing/update" method="post" >
+		                            <input type="hidden" name="group_id" value="<?php echo $row->group_id ?>">
 
-                                    <select name="member_3" onchange="this.form.submit()" class="sel">
-                                        <option>  Select Attendee </option>
+		                            <select name="member_3" onchange="this.form.submit()" class="sel">
+		                                <option>  Select Attendee </option>
 
-                                        <?php foreach ($nso as $val) { ?>
-                                            <option value="<?php echo $val->form_id ?>"><?php echo $val->firstName ?> <?php echo $val->lastName ?></option>
-                                        <?php } ?>
-                                                
-                                    </select>
+		                                <?php foreach ($nso as $val) { ?>
+		                                    <option value="<?php echo $val->form_id ?>"><?php echo $val->firstName ?> <?php echo $val->lastName ?></option>
+		                                <?php } ?>
+		                                        
+		                            </select>
 
-                                    </form>
-                                <?php }else{ ?>
-                                    <a href="#" onclick="return confirm('Are you sure you want to move Evan Bellan to another foursome?')" class="else"> <?php echo getUserNameByID($row->member_3) ?></a>
-                                <?php }?>
-        					</td>
-        					
-        				</tr>
-        				<tr>
-        					<td>
-        						<?php if ($row->member_4 == 0 ) { ?>
-                                
-                                    <form action="<?php echo base_url()?>golf/update" method="post" >
-                                    <input type="hidden" name="group_id" value="<?php echo $row->group_id ?>">
+		                            </form>
+		                        <?php }else{ ?>
+		                            <a href="#" onclick="return confirm('Are you sure you want to move Evan Bellan to another foursome?')" class="else"> <?php echo getUserNameByID($row->member_3) ?></a>
+		                        <?php }?>
+							</td>
+							
+						</tr>
+						<tr>
+							<td>
+								<?php if ($row->member_4 == 0 ) { ?>
+		                        
+		                            <form action="<?php echo base_url()?>fishing/update" method="post" >
+		                            <input type="hidden" name="group_id" value="<?php echo $row->group_id ?>">
 
-                                    <select name="member_4" onchange="this.form.submit()" class="sel">
-                                        <option>  Select Attendee </option>
+		                            <select name="member_4" onchange="this.form.submit()" class="sel">
+		                                <option>  Select Attendee </option>
 
-                                        <?php foreach ($nso as $val) { ?>
-                                            <option value="<?php echo $val->form_id ?>"><?php echo $val->firstName ?> <?php echo $val->lastName ?></option>
-                                        <?php } ?>
-                                                
-                                    </select>
+		                                <?php foreach ($nso as $val) { ?>
+		                                    <option value="<?php echo $val->form_id ?>"><?php echo $val->firstName ?> <?php echo $val->lastName ?></option>
+		                                <?php } ?>
+		                                        
+		                            </select>
 
-                                    </form>
-                                <?php }else{ ?>
-                                    <a href="#" onclick="return confirm('Are you sure you want to move Evan Bellan to another foursome?')" class="else"> <?php echo getUserNameByID($row->member_4) ?></a>
-                                <?php }?>
-        					</td>
-        					
-        				</tr>
-        			</table>
-        		</div>
-        	</div>
-            <?php } ?>
-
-
-        </div>
+		                            </form>
+		                        <?php }else{ ?>
+		                            <a href="#" onclick="return confirm('Are you sure you want to move Evan Bellan to another foursome?')" class="else"> <?php echo getUserNameByID($row->member_4) ?></a>
+		                        <?php }?>
+							</td>
+							
+						</tr>
+					</table>
+				</div>
+			</div>
+		    <?php } ?>
 
 
 
+
+
+		</div>
 	
 
 	</div>

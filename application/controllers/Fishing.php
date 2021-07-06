@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') or exit('No direct script access allowed');
 
-class Golf extends CI_Controller
+class Fishing extends CI_Controller
 {
     static $helper   = array('user_helper');
     public function __construct()
@@ -15,23 +15,23 @@ class Golf extends CI_Controller
 
     public function participant()
     {
-        $query = $this->db->where('type','Golf')->get('nso_new_group');
+        $query = $this->db->where('type','Fishing')->get('nso_new_group');
 
         $data['count'] = $query->num_rows();
         $data['group'] = $query->result();
 
-        $dquery = $this->db->where('confEvent','Golf')->get('nso_forms');
+        $dquery = $this->db->where('confEvent','Fishing')->get('nso_forms');
 
         $data['countper'] = $dquery->num_rows();
         
 
-        $nsoquery =  $this->db->query("SELECT * FROM `nso_forms` WHERE NOT EXISTS( SELECT * FROM `nso_new_group` WHERE `nso_forms`.`form_id` = `nso_new_group`.`member_1` OR `nso_forms`.`form_id` = `nso_new_group`.`member_2` OR `nso_forms`.`form_id` = `nso_new_group`.`member_3` OR `nso_forms`.`form_id` = `nso_new_group`.`member_4`) AND `nso_forms`.`confEvent`='Golf'");
+        $nsoquery =  $this->db->query("SELECT * FROM `nso_forms` WHERE NOT EXISTS( SELECT * FROM `nso_new_group` WHERE `nso_forms`.`form_id` = `nso_new_group`.`member_1` OR `nso_forms`.`form_id` = `nso_new_group`.`member_2` OR `nso_forms`.`form_id` = `nso_new_group`.`member_3` OR `nso_forms`.`form_id` = `nso_new_group`.`member_4`) AND `nso_forms`.`confEvent`='Fishing'");
         $data['nso'] = $nsoquery->result();
        
 
         $data['title'] = "Home";
         $data['mainContent'] = $this->load->view('frontend/index.php', $data, true);
-        $this->load->view('frontend/golf_participant',$data);
+        $this->load->view('frontend/fishing_participant',$data);
     }
 
     public function update(){
@@ -45,6 +45,6 @@ class Golf extends CI_Controller
         }
 
         $this->db->where('group_id',$group_id)->update('nso_new_group',$data);
-        redirect(base_url('golf_participant'));
+        redirect(base_url('fishing_participant'));
     }
 }
