@@ -82,6 +82,7 @@ $route['admin/products'] = 'SetupController/products';
 
 $route['admin/edit_attendee/(:any)'] = 'SetupController/edit_attendee/$1';
 $route['admin/edit_grouping/(:any)'] = 'SetupController/edit_grouping/$1';
+$route['admin/canceled_attendee/(:any)'] = 'SetupController/canceled_attendee/$1';
 
 $route['admin/attendee'] = 'SetupController/attendee';
 $route['admin/registereduser'] = 'SetupController/registereduser';

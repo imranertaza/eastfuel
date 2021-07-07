@@ -241,6 +241,19 @@ class SetupController extends CI_Controller
     }
 
 
+    public function canceled_attendee($id){
+
+        $data['paymentStatus'] = 'canceled';
+
+        $new_user = $this->db->where('form_id',$id)->update('nso_forms', $data);
+                
+        message("Update successfully! Thank You...");
+
+        redirect(base_url('admin/registereduser'));
+
+    }
+
+
     public function page_edit($uri)
     {
         $data['page'] = $page =  $this->CommonModel->get_single_data_by_single_column('nso_pages', 'uri', $uri);

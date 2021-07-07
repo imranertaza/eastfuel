@@ -105,6 +105,12 @@
                                                 <a href="<?php echo base_url('admin/addnote/attendee/' . $item->form_id) ?>" class="dropdown-item" target="_blank"><i class="icon-plus-circle2"></i> Add Note</a>
                                                 <a href="<?php echo base_url('admin/edit_attendee/'.$item->form_id) ?>" class="dropdown-item">
                                                     <i class="icon-edit"></i> Edit</a>
+
+                                                <a href="<?php echo base_url('admin/canceled_attendee/'.$item->form_id) ?>" class="dropdown-item">
+                                                    <i class="icon-edit"></i> Canceled</a>
+
+
+
                                                 <a href="<?php echo base_url('admin/delete/reg_user/' . $item->form_id) ?>" onclick="return confirm('are you sure?')" class="dropdown-item"><i class="icon-bin"></i> Delete</a>
                                             </div>
                                         </div>
